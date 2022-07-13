@@ -733,3 +733,768 @@
 , port: COM10
 2022-07-12 18:36:36.502 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'close', '1': 'close'} from ./my_test_app/data/states.json
 2022-07-12 18:36:36.507 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "open"}
+2022-07-12 19:03:16.460 | INFO     | my_test_app.app.application:websocket_endpoint:93 - WebSocket: client (<starlette.websockets.WebSocket object at 0x000001C7150307F0>) disconnected.
+2022-07-12 19:03:16.791 | INFO     | my_test_app.app.websockethandler:greet_new_client:76 - WebSocket: new client (<starlette.websockets.WebSocket object at 0x000001C715060040>) connected.
+2022-07-12 19:03:16.795 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'open', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:03:16.801 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'open', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:03:19.966 | INFO     | my_test_app.app.application:websocket_endpoint:93 - WebSocket: client (<starlette.websockets.WebSocket object at 0x000001C715060040>) disconnected.
+2022-07-12 19:03:20.292 | INFO     | my_test_app.app.websockethandler:greet_new_client:76 - WebSocket: new client (<starlette.websockets.WebSocket object at 0x000001C715061780>) connected.
+2022-07-12 19:03:20.296 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'open', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:03:20.304 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'open', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:03:21.373 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"close"}
+2022-07-12 19:03:21.421 | INFO     | my_test_app.app.serial_arduino:send_command_serial:43 - Serial: To Arduino: "{\"actuatorId\": \"0\", \"state\": \"close\"}"
+2022-07-12 19:03:21.424 | INFO     | my_test_app.app.serial_arduino:send_command_serial:44 - Serial: To Arduino: b'0:close'
+2022-07-12 19:03:24.765 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"open"}
+2022-07-12 19:03:24.814 | INFO     | my_test_app.app.serial_arduino:send_command_serial:43 - Serial: To Arduino: "{\"actuatorId\": \"0\", \"state\": \"open\"}"
+2022-07-12 19:03:24.817 | INFO     | my_test_app.app.serial_arduino:send_command_serial:44 - Serial: To Arduino: b'0:open'
+2022-07-12 19:03:26.002 | INFO     | my_test_app.app.serial_arduino:parse_serial:81 - Serial: get serial message: 0:closing
+, port: COM10
+2022-07-12 19:03:26.006 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'open', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:03:26.010 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "closing"}
+2022-07-12 19:03:26.810 | INFO     | my_test_app.app.serial_arduino:parse_serial:81 - Serial: get serial message: 0:close
+, port: COM10
+2022-07-12 19:03:26.814 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'closing', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:03:26.818 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "close"}
+2022-07-12 19:03:28.613 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"close"}
+2022-07-12 19:03:28.676 | INFO     | my_test_app.app.serial_arduino:send_command_serial:43 - Serial: To Arduino: "{\"actuatorId\": \"0\", \"state\": \"close\"}"
+2022-07-12 19:03:28.679 | INFO     | my_test_app.app.serial_arduino:send_command_serial:44 - Serial: To Arduino: b'0:close'
+2022-07-12 19:03:28.933 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"open"}
+2022-07-12 19:03:28.992 | INFO     | my_test_app.app.serial_arduino:send_command_serial:43 - Serial: To Arduino: "{\"actuatorId\": \"0\", \"state\": \"open\"}"
+2022-07-12 19:03:28.995 | INFO     | my_test_app.app.serial_arduino:send_command_serial:44 - Serial: To Arduino: b'0:open'
+2022-07-12 19:03:30.167 | INFO     | my_test_app.app.serial_arduino:parse_serial:81 - Serial: get serial message: Unknown command:close0:open
+, port: COM10
+2022-07-12 19:03:31.668 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"open"}
+2022-07-12 19:03:31.718 | INFO     | my_test_app.app.serial_arduino:send_command_serial:43 - Serial: To Arduino: "{\"actuatorId\": \"0\", \"state\": \"open\"}"
+2022-07-12 19:03:31.721 | INFO     | my_test_app.app.serial_arduino:send_command_serial:44 - Serial: To Arduino: b'0:open'
+2022-07-12 19:03:32.029 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"close"}
+2022-07-12 19:03:32.131 | INFO     | my_test_app.app.serial_arduino:send_command_serial:43 - Serial: To Arduino: "{\"actuatorId\": \"0\", \"state\": \"close\"}"
+2022-07-12 19:03:32.134 | INFO     | my_test_app.app.serial_arduino:send_command_serial:44 - Serial: To Arduino: b'0:close'
+2022-07-12 19:03:33.314 | INFO     | my_test_app.app.serial_arduino:parse_serial:81 - Serial: get serial message: Unknown command:open0:close
+, port: COM10
+2022-07-12 19:03:49.933 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"open"}
+2022-07-12 19:03:50.123 | INFO     | my_test_app.app.serial_arduino:send_command_serial:43 - Serial: To Arduino: "{\"actuatorId\": \"0\", \"state\": \"open\"}"
+2022-07-12 19:03:50.127 | INFO     | my_test_app.app.serial_arduino:send_command_serial:44 - Serial: To Arduino: b'0:open'
+2022-07-12 19:03:50.469 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"close"}
+2022-07-12 19:03:50.518 | INFO     | my_test_app.app.serial_arduino:send_command_serial:43 - Serial: To Arduino: "{\"actuatorId\": \"0\", \"state\": \"close\"}"
+2022-07-12 19:03:50.521 | INFO     | my_test_app.app.serial_arduino:send_command_serial:44 - Serial: To Arduino: b'0:close'
+2022-07-12 19:03:51.717 | INFO     | my_test_app.app.serial_arduino:parse_serial:81 - Serial: get serial message: Unknown command:open0:close
+, port: COM10
+2022-07-12 19:03:52.093 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"open"}
+2022-07-12 19:03:52.120 | INFO     | my_test_app.app.serial_arduino:send_command_serial:43 - Serial: To Arduino: "{\"actuatorId\": \"0\", \"state\": \"open\"}"
+2022-07-12 19:03:52.123 | INFO     | my_test_app.app.serial_arduino:send_command_serial:44 - Serial: To Arduino: b'0:open'
+2022-07-12 19:03:56.482 | INFO     | my_test_app.app.serial_arduino:parse_serial:81 - Serial: get serial message: 0:open
+, port: COM10
+2022-07-12 19:03:56.486 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'close', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:03:56.491 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "open"}
+2022-07-12 19:04:12.261 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"open"}
+2022-07-12 19:04:12.365 | INFO     | my_test_app.app.serial_arduino:send_command_serial:43 - Serial: To Arduino: "{\"actuatorId\": \"0\", \"state\": \"open\"}"
+2022-07-12 19:04:12.368 | INFO     | my_test_app.app.serial_arduino:send_command_serial:44 - Serial: To Arduino: b'0:open'
+2022-07-12 19:04:14.237 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"open"}
+2022-07-12 19:04:14.343 | INFO     | my_test_app.app.serial_arduino:send_command_serial:43 - Serial: To Arduino: "{\"actuatorId\": \"0\", \"state\": \"open\"}"
+2022-07-12 19:04:14.347 | INFO     | my_test_app.app.serial_arduino:send_command_serial:44 - Serial: To Arduino: b'0:open'
+2022-07-12 19:04:15.528 | INFO     | my_test_app.app.serial_arduino:parse_serial:81 - Serial: get serial message: 0:opening
+, port: COM10
+2022-07-12 19:04:15.733 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'open', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:04:15.738 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "opening"}
+2022-07-12 19:04:16.661 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"open"}
+2022-07-12 19:04:16.735 | INFO     | my_test_app.app.serial_arduino:send_command_serial:43 - Serial: To Arduino: "{\"actuatorId\": \"0\", \"state\": \"open\"}"
+2022-07-12 19:04:16.738 | INFO     | my_test_app.app.serial_arduino:send_command_serial:44 - Serial: To Arduino: b'0:open'
+2022-07-12 19:04:17.931 | INFO     | my_test_app.app.serial_arduino:parse_serial:81 - Serial: get serial message: 0:opening
+, port: COM10
+2022-07-12 19:04:17.936 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'opening', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:04:17.939 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "opening"}
+2022-07-12 19:04:18.729 | INFO     | my_test_app.app.serial_arduino:parse_serial:81 - Serial: get serial message: 0:open
+, port: COM10
+2022-07-12 19:04:18.733 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'opening', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:04:18.738 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "open"}
+2022-07-12 19:06:30.278 | INFO     | my_test_app.app.states_file:init_states:19 - JSON:  Successfully read init states: ./my_test_app/data/states.json
+2022-07-12 19:06:38.188 | INFO     | my_test_app.app.websockethandler:greet_new_client:76 - WebSocket: new client (<starlette.websockets.WebSocket object at 0x0000025EF2EA07C0>) connected.
+2022-07-12 19:06:38.192 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'open', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:06:38.202 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'open', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:06:39.052 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"close"}
+2022-07-12 19:06:39.216 | INFO     | my_test_app.app.serial_arduino:send_command_serial:43 - Serial: To Arduino: "{\"actuatorId\": \"0\", \"state\": \"close\"}"
+2022-07-12 19:06:39.219 | INFO     | my_test_app.app.serial_arduino:send_command_serial:44 - Serial: To Arduino: b'0:close'
+2022-07-12 19:06:40.419 | INFO     | my_test_app.app.serial_arduino:parse_serial:81 - Serial: get serial message: 0:closing
+, port: COM10
+2022-07-12 19:06:40.422 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'open', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:06:40.427 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "closing"}
+2022-07-12 19:06:43.588 | INFO     | my_test_app.app.serial_arduino:parse_serial:81 - Serial: get serial message: 0:close
+, port: COM10
+2022-07-12 19:06:43.593 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'closing', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:06:43.597 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "close"}
+2022-07-12 19:06:46.187 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"open"}
+2022-07-12 19:06:46.367 | INFO     | my_test_app.app.serial_arduino:send_command_serial:43 - Serial: To Arduino: "{\"actuatorId\": \"0\", \"state\": \"open\"}"
+2022-07-12 19:06:46.370 | INFO     | my_test_app.app.serial_arduino:send_command_serial:44 - Serial: To Arduino: b'0:open'
+2022-07-12 19:06:47.568 | INFO     | my_test_app.app.serial_arduino:parse_serial:81 - Serial: get serial message: 0:opening
+, port: COM10
+2022-07-12 19:06:47.572 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'close', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:06:47.576 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "opening"}
+2022-07-12 19:06:50.768 | INFO     | my_test_app.app.serial_arduino:parse_serial:81 - Serial: get serial message: 0:open
+, port: COM10
+2022-07-12 19:06:50.773 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'opening', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:06:50.776 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "open"}
+2022-07-12 19:08:37.107 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"close"}
+2022-07-12 19:08:37.309 | INFO     | my_test_app.app.serial_arduino:send_command_serial:43 - Serial: To Arduino: "{\"actuatorId\": \"0\", \"state\": \"close\"}"
+2022-07-12 19:08:37.312 | INFO     | my_test_app.app.serial_arduino:send_command_serial:44 - Serial: To Arduino: b'0:close'
+2022-07-12 19:08:38.516 | INFO     | my_test_app.app.serial_arduino:parse_serial:81 - Serial: get serial message: 0:closing
+, port: COM10
+2022-07-12 19:08:38.522 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'open', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:08:38.526 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "closing"}
+2022-07-12 19:08:39.994 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"open"}
+2022-07-12 19:08:40.111 | INFO     | my_test_app.app.serial_arduino:send_command_serial:43 - Serial: To Arduino: "{\"actuatorId\": \"0\", \"state\": \"open\"}"
+2022-07-12 19:08:40.114 | INFO     | my_test_app.app.serial_arduino:send_command_serial:44 - Serial: To Arduino: b'0:open'
+2022-07-12 19:08:41.306 | INFO     | my_test_app.app.serial_arduino:parse_serial:81 - Serial: get serial message: 0:closing
+, port: COM10
+2022-07-12 19:08:41.310 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'closing', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:08:41.314 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "closing"}
+2022-07-12 19:08:42.725 | INFO     | my_test_app.app.serial_arduino:parse_serial:81 - Serial: get serial message: 0:close
+, port: COM10
+2022-07-12 19:08:42.925 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'closing', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:08:42.930 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "close"}
+2022-07-12 19:08:47.090 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"open"}
+2022-07-12 19:08:47.138 | INFO     | my_test_app.app.serial_arduino:send_command_serial:43 - Serial: To Arduino: "{\"actuatorId\": \"0\", \"state\": \"open\"}"
+2022-07-12 19:08:47.141 | INFO     | my_test_app.app.serial_arduino:send_command_serial:44 - Serial: To Arduino: b'0:open'
+2022-07-12 19:08:48.349 | INFO     | my_test_app.app.serial_arduino:parse_serial:81 - Serial: get serial message: 0:opening
+, port: COM10
+2022-07-12 19:08:48.353 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'close', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:08:48.358 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "opening"}
+2022-07-12 19:08:49.346 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"close"}
+2022-07-12 19:08:49.550 | INFO     | my_test_app.app.serial_arduino:send_command_serial:43 - Serial: To Arduino: "{\"actuatorId\": \"0\", \"state\": \"close\"}"
+2022-07-12 19:08:49.553 | INFO     | my_test_app.app.serial_arduino:send_command_serial:44 - Serial: To Arduino: b'0:close'
+2022-07-12 19:08:50.666 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"close"}
+2022-07-12 19:08:50.769 | INFO     | my_test_app.app.serial_arduino:send_command_serial:43 - Serial: To Arduino: "{\"actuatorId\": \"0\", \"state\": \"close\"}"
+2022-07-12 19:08:50.772 | INFO     | my_test_app.app.serial_arduino:send_command_serial:44 - Serial: To Arduino: b'0:close'
+2022-07-12 19:08:50.775 | INFO     | my_test_app.app.serial_arduino:parse_serial:81 - Serial: get serial message: 0:opening
+, port: COM10
+2022-07-12 19:08:50.960 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'opening', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:08:50.965 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "opening"}
+2022-07-12 19:08:51.738 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"close"}
+2022-07-12 19:08:51.942 | INFO     | my_test_app.app.serial_arduino:parse_serial:81 - Serial: get serial message: 0:opening
+, port: COM10
+2022-07-12 19:08:51.946 | INFO     | my_test_app.app.serial_arduino:send_command_serial:43 - Serial: To Arduino: "{\"actuatorId\": \"0\", \"state\": \"close\"}"
+2022-07-12 19:08:51.949 | INFO     | my_test_app.app.serial_arduino:send_command_serial:44 - Serial: To Arduino: b'0:close'
+2022-07-12 19:08:51.951 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'opening', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:08:51.955 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "opening"}
+2022-07-12 19:08:53.149 | INFO     | my_test_app.app.serial_arduino:parse_serial:81 - Serial: get serial message: 0:opening
+, port: COM10
+2022-07-12 19:08:53.337 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'opening', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:08:53.342 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "opening"}
+2022-07-12 19:08:54.581 | INFO     | my_test_app.app.serial_arduino:parse_serial:81 - Serial: get serial message: 0:open
+, port: COM10
+2022-07-12 19:08:54.698 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'opening', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:08:54.703 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "open"}
+2022-07-12 19:09:16.186 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"close"}
+2022-07-12 19:09:16.354 | INFO     | my_test_app.app.serial_arduino:send_command_serial:43 - Serial: To Arduino: "{\"actuatorId\": \"0\", \"state\": \"close\"}"
+2022-07-12 19:09:16.360 | INFO     | my_test_app.app.serial_arduino:send_command_serial:44 - Serial: To Arduino: b'0:close'
+2022-07-12 19:09:16.394 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"close"}
+2022-07-12 19:09:16.558 | INFO     | my_test_app.app.serial_arduino:send_command_serial:43 - Serial: To Arduino: "{\"actuatorId\": \"0\", \"state\": \"close\"}"
+2022-07-12 19:09:16.561 | INFO     | my_test_app.app.serial_arduino:send_command_serial:44 - Serial: To Arduino: b'0:close'
+2022-07-12 19:09:16.594 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"close"}
+2022-07-12 19:09:16.769 | INFO     | my_test_app.app.serial_arduino:send_command_serial:43 - Serial: To Arduino: "{\"actuatorId\": \"0\", \"state\": \"close\"}"
+2022-07-12 19:09:16.776 | INFO     | my_test_app.app.serial_arduino:send_command_serial:44 - Serial: To Arduino: b'0:close'
+2022-07-12 19:09:16.793 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"close"}
+2022-07-12 19:09:16.973 | INFO     | my_test_app.app.serial_arduino:send_command_serial:43 - Serial: To Arduino: "{\"actuatorId\": \"0\", \"state\": \"close\"}"
+2022-07-12 19:09:16.976 | INFO     | my_test_app.app.serial_arduino:send_command_serial:44 - Serial: To Arduino: b'0:close'
+2022-07-12 19:09:18.166 | INFO     | my_test_app.app.serial_arduino:parse_serial:81 - Serial: get serial message: Unknown command:close0:close0:close0:close
+, port: COM10
+2022-07-12 19:09:28.897 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"open"}
+2022-07-12 19:09:29.040 | INFO     | my_test_app.app.serial_arduino:send_command_serial:43 - Serial: To Arduino: "{\"actuatorId\": \"0\", \"state\": \"open\"}"
+2022-07-12 19:09:29.043 | INFO     | my_test_app.app.serial_arduino:send_command_serial:44 - Serial: To Arduino: b'0:open'
+2022-07-12 19:09:29.109 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"open"}
+2022-07-12 19:09:29.247 | INFO     | my_test_app.app.serial_arduino:send_command_serial:43 - Serial: To Arduino: "{\"actuatorId\": \"0\", \"state\": \"open\"}"
+2022-07-12 19:09:29.250 | INFO     | my_test_app.app.serial_arduino:send_command_serial:44 - Serial: To Arduino: b'0:open'
+2022-07-12 19:09:29.313 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"open"}
+2022-07-12 19:09:29.458 | INFO     | my_test_app.app.serial_arduino:send_command_serial:43 - Serial: To Arduino: "{\"actuatorId\": \"0\", \"state\": \"open\"}"
+2022-07-12 19:09:29.461 | INFO     | my_test_app.app.serial_arduino:send_command_serial:44 - Serial: To Arduino: b'0:open'
+2022-07-12 19:09:29.503 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"open"}
+2022-07-12 19:09:29.651 | INFO     | my_test_app.app.serial_arduino:send_command_serial:43 - Serial: To Arduino: "{\"actuatorId\": \"0\", \"state\": \"open\"}"
+2022-07-12 19:09:29.654 | INFO     | my_test_app.app.serial_arduino:send_command_serial:44 - Serial: To Arduino: b'0:open'
+2022-07-12 19:09:29.702 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"open"}
+2022-07-12 19:09:29.865 | INFO     | my_test_app.app.serial_arduino:send_command_serial:43 - Serial: To Arduino: "{\"actuatorId\": \"0\", \"state\": \"open\"}"
+2022-07-12 19:09:29.868 | INFO     | my_test_app.app.serial_arduino:send_command_serial:44 - Serial: To Arduino: b'0:open'
+2022-07-12 19:09:31.065 | INFO     | my_test_app.app.serial_arduino:parse_serial:81 - Serial: get serial message: Unknown command:open0:open0:open0:open0:open
+, port: COM10
+2022-07-12 19:10:42.064 | INFO     | my_test_app.app.states_file:init_states:19 - JSON:  Successfully read init states: ./my_test_app/data/states.json
+2022-07-12 19:11:24.388 | INFO     | my_test_app.app.states_file:init_states:19 - JSON:  Successfully read init states: ./my_test_app/data/states.json
+2022-07-12 19:11:44.427 | INFO     | my_test_app.app.states_file:init_states:19 - JSON:  Successfully read init states: ./my_test_app/data/states.json
+2022-07-12 19:11:44.773 | INFO     | my_test_app.app.websockethandler:greet_new_client:75 - WebSocket: new client (<starlette.websockets.WebSocket object at 0x00000217E4B59720>) connected.
+2022-07-12 19:11:44.776 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'open', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:11:44.783 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'open', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:11:45.897 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"close"}
+2022-07-12 19:11:45.982 | INFO     | my_test_app.app.serial_arduino:send_command_serial:43 - Serial: To Arduino: "{\"actuatorId\": \"0\", \"state\": \"close\"}"
+2022-07-12 19:11:45.985 | INFO     | my_test_app.app.serial_arduino:send_command_serial:44 - Serial: To Arduino: b'0:close'
+2022-07-12 19:11:46.223 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"close"}
+2022-07-12 19:11:46.396 | INFO     | my_test_app.app.serial_arduino:send_command_serial:43 - Serial: To Arduino: "{\"actuatorId\": \"0\", \"state\": \"close\"}"
+2022-07-12 19:11:46.400 | INFO     | my_test_app.app.serial_arduino:send_command_serial:44 - Serial: To Arduino: b'0:close'
+2022-07-12 19:11:47.008 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"open"}
+2022-07-12 19:11:47.196 | INFO     | my_test_app.app.serial_arduino:send_command_serial:43 - Serial: To Arduino: "{\"actuatorId\": \"0\", \"state\": \"open\"}"
+2022-07-12 19:11:47.200 | INFO     | my_test_app.app.serial_arduino:send_command_serial:44 - Serial: To Arduino: b'0:open'
+2022-07-12 19:11:47.280 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"open"}
+2022-07-12 19:11:47.396 | INFO     | my_test_app.app.serial_arduino:send_command_serial:43 - Serial: To Arduino: "{\"actuatorId\": \"0\", \"state\": \"open\"}"
+2022-07-12 19:11:47.400 | INFO     | my_test_app.app.serial_arduino:send_command_serial:44 - Serial: To Arduino: b'0:open'
+2022-07-12 19:11:47.624 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"close"}
+2022-07-12 19:11:47.817 | INFO     | my_test_app.app.serial_arduino:send_command_serial:43 - Serial: To Arduino: "{\"actuatorId\": \"0\", \"state\": \"close\"}"
+2022-07-12 19:11:47.820 | INFO     | my_test_app.app.serial_arduino:send_command_serial:44 - Serial: To Arduino: b'0:close'
+2022-07-12 19:11:47.880 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"close"}
+2022-07-12 19:11:48.026 | INFO     | my_test_app.app.serial_arduino:send_command_serial:43 - Serial: To Arduino: "{\"actuatorId\": \"0\", \"state\": \"close\"}"
+2022-07-12 19:11:48.029 | INFO     | my_test_app.app.serial_arduino:send_command_serial:44 - Serial: To Arduino: b'0:close'
+2022-07-12 19:11:48.088 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"close"}
+2022-07-12 19:11:48.229 | INFO     | my_test_app.app.serial_arduino:send_command_serial:43 - Serial: To Arduino: "{\"actuatorId\": \"0\", \"state\": \"close\"}"
+2022-07-12 19:11:48.232 | INFO     | my_test_app.app.serial_arduino:send_command_serial:44 - Serial: To Arduino: b'0:close'
+2022-07-12 19:11:49.387 | INFO     | my_test_app.app.serial_arduino:parse_serial:81 - Serial: get serial message: Unknown command:close0:close0:open0:open0:close0:close0:close
+, port: COM10
+2022-07-12 19:11:57.568 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"open"}
+2022-07-12 19:11:57.657 | INFO     | my_test_app.app.serial_arduino:send_command_serial:43 - Serial: To Arduino: "{\"actuatorId\": \"0\", \"state\": \"open\"}"
+2022-07-12 19:11:57.661 | INFO     | my_test_app.app.serial_arduino:send_command_serial:44 - Serial: To Arduino: b'0:open'
+2022-07-12 19:11:58.841 | INFO     | my_test_app.app.serial_arduino:parse_serial:81 - Serial: get serial message: 0:opening
+, port: COM10
+2022-07-12 19:11:58.845 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'open', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:11:58.850 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:83 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "opening"}
+2022-07-12 19:12:02.027 | INFO     | my_test_app.app.serial_arduino:parse_serial:81 - Serial: get serial message: 0:open
+, port: COM10
+2022-07-12 19:12:02.233 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'opening', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:12:02.240 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:83 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "open"}
+2022-07-12 19:12:06.456 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"close"}
+2022-07-12 19:12:06.606 | INFO     | my_test_app.app.serial_arduino:send_command_serial:43 - Serial: To Arduino: "{\"actuatorId\": \"0\", \"state\": \"close\"}"
+2022-07-12 19:12:06.610 | INFO     | my_test_app.app.serial_arduino:send_command_serial:44 - Serial: To Arduino: b'0:close'
+2022-07-12 19:12:07.797 | INFO     | my_test_app.app.serial_arduino:parse_serial:81 - Serial: get serial message: 0:closing
+, port: COM10
+2022-07-12 19:12:07.999 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'open', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:12:08.004 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:83 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "closing"}
+2022-07-12 19:12:10.963 | INFO     | my_test_app.app.serial_arduino:parse_serial:81 - Serial: get serial message: 0:close
+, port: COM10
+2022-07-12 19:12:11.153 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'closing', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:12:11.158 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:83 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "close"}
+2022-07-12 19:12:12.912 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"open"}
+2022-07-12 19:12:12.930 | INFO     | my_test_app.app.serial_arduino:send_command_serial:43 - Serial: To Arduino: "{\"actuatorId\": \"0\", \"state\": \"open\"}"
+2022-07-12 19:12:12.933 | INFO     | my_test_app.app.serial_arduino:send_command_serial:44 - Serial: To Arduino: b'0:open'
+2022-07-12 19:12:13.096 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"open"}
+2022-07-12 19:12:13.128 | INFO     | my_test_app.app.serial_arduino:send_command_serial:43 - Serial: To Arduino: "{\"actuatorId\": \"0\", \"state\": \"open\"}"
+2022-07-12 19:12:13.131 | INFO     | my_test_app.app.serial_arduino:send_command_serial:44 - Serial: To Arduino: b'0:open'
+2022-07-12 19:12:13.272 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"open"}
+2022-07-12 19:12:13.329 | INFO     | my_test_app.app.serial_arduino:send_command_serial:43 - Serial: To Arduino: "{\"actuatorId\": \"0\", \"state\": \"open\"}"
+2022-07-12 19:12:13.332 | INFO     | my_test_app.app.serial_arduino:send_command_serial:44 - Serial: To Arduino: b'0:open'
+2022-07-12 19:12:13.455 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"open"}
+2022-07-12 19:12:13.513 | INFO     | my_test_app.app.serial_arduino:send_command_serial:43 - Serial: To Arduino: "{\"actuatorId\": \"0\", \"state\": \"open\"}"
+2022-07-12 19:12:13.517 | INFO     | my_test_app.app.serial_arduino:send_command_serial:44 - Serial: To Arduino: b'0:open'
+2022-07-12 19:12:13.624 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"open"}
+2022-07-12 19:12:13.713 | INFO     | my_test_app.app.serial_arduino:send_command_serial:43 - Serial: To Arduino: "{\"actuatorId\": \"0\", \"state\": \"open\"}"
+2022-07-12 19:12:13.717 | INFO     | my_test_app.app.serial_arduino:send_command_serial:44 - Serial: To Arduino: b'0:open'
+2022-07-12 19:12:13.791 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"open"}
+2022-07-12 19:12:13.924 | INFO     | my_test_app.app.serial_arduino:send_command_serial:43 - Serial: To Arduino: "{\"actuatorId\": \"0\", \"state\": \"open\"}"
+2022-07-12 19:12:13.927 | INFO     | my_test_app.app.serial_arduino:send_command_serial:44 - Serial: To Arduino: b'0:open'
+2022-07-12 19:12:15.104 | INFO     | my_test_app.app.serial_arduino:parse_serial:81 - Serial: get serial message: Unknown command:open0:open0:open0:open0:open0:open
+, port: COM10
+2022-07-12 19:13:07.688 | INFO     | my_test_app.app.states_file:init_states:19 - JSON:  Successfully read init states: ./my_test_app/data/states.json
+2022-07-12 19:13:13.961 | INFO     | my_test_app.app.states_file:init_states:19 - JSON:  Successfully read init states: ./my_test_app/data/states.json
+2022-07-12 19:13:14.306 | INFO     | my_test_app.app.websockethandler:greet_new_client:76 - WebSocket: new client (<starlette.websockets.WebSocket object at 0x0000024F86EA9720>) connected.
+2022-07-12 19:13:14.309 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'close', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:13:14.316 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'close', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:13:14.968 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"close"}
+2022-07-12 19:13:15.116 | INFO     | my_test_app.app.serial_arduino:send_command_serial:43 - Serial: To Arduino: "{\"actuatorId\": \"0\", \"state\": \"close\"}"
+2022-07-12 19:13:15.120 | INFO     | my_test_app.app.serial_arduino:send_command_serial:44 - Serial: To Arduino: b'0:close'
+2022-07-12 19:13:15.449 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"close"}
+2022-07-12 19:13:15.532 | INFO     | my_test_app.app.serial_arduino:send_command_serial:43 - Serial: To Arduino: "{\"actuatorId\": \"0\", \"state\": \"close\"}"
+2022-07-12 19:13:15.535 | INFO     | my_test_app.app.serial_arduino:send_command_serial:44 - Serial: To Arduino: b'0:close'
+2022-07-12 19:13:15.953 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"close"}
+2022-07-12 19:13:16.135 | INFO     | my_test_app.app.serial_arduino:send_command_serial:43 - Serial: To Arduino: "{\"actuatorId\": \"0\", \"state\": \"close\"}"
+2022-07-12 19:13:16.138 | INFO     | my_test_app.app.serial_arduino:send_command_serial:44 - Serial: To Arduino: b'0:close'
+2022-07-12 19:13:16.456 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"close"}
+2022-07-12 19:13:16.551 | INFO     | my_test_app.app.serial_arduino:send_command_serial:43 - Serial: To Arduino: "{\"actuatorId\": \"0\", \"state\": \"close\"}"
+2022-07-12 19:13:16.555 | INFO     | my_test_app.app.serial_arduino:send_command_serial:44 - Serial: To Arduino: b'0:close'
+2022-07-12 19:13:16.948 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"close"}
+2022-07-12 19:13:17.153 | INFO     | my_test_app.app.serial_arduino:send_command_serial:43 - Serial: To Arduino: "{\"actuatorId\": \"0\", \"state\": \"close\"}"
+2022-07-12 19:13:17.156 | INFO     | my_test_app.app.serial_arduino:send_command_serial:44 - Serial: To Arduino: b'0:close'
+2022-07-12 19:13:17.454 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"close"}
+2022-07-12 19:13:17.539 | INFO     | my_test_app.app.serial_arduino:send_command_serial:43 - Serial: To Arduino: "{\"actuatorId\": \"0\", \"state\": \"close\"}"
+2022-07-12 19:13:17.542 | INFO     | my_test_app.app.serial_arduino:send_command_serial:44 - Serial: To Arduino: b'0:close'
+2022-07-12 19:13:17.961 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"close"}
+2022-07-12 19:13:18.136 | INFO     | my_test_app.app.serial_arduino:send_command_serial:43 - Serial: To Arduino: "{\"actuatorId\": \"0\", \"state\": \"close\"}"
+2022-07-12 19:13:18.143 | INFO     | my_test_app.app.serial_arduino:send_command_serial:44 - Serial: To Arduino: b'0:close'
+2022-07-12 19:13:19.357 | INFO     | my_test_app.app.serial_arduino:parse_serial:81 - Serial: get serial message: Unknown command:close0:close0:close0:close0:close0:close
+, port: COM10
+2022-07-12 19:13:31.335 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"open"}
+2022-07-12 19:13:31.470 | INFO     | my_test_app.app.serial_arduino:send_command_serial:43 - Serial: To Arduino: "{\"actuatorId\": \"0\", \"state\": \"open\"}"
+2022-07-12 19:13:31.473 | INFO     | my_test_app.app.serial_arduino:send_command_serial:44 - Serial: To Arduino: b'0:open'
+2022-07-12 19:13:32.103 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"open"}
+2022-07-12 19:13:32.246 | INFO     | my_test_app.app.serial_arduino:send_command_serial:43 - Serial: To Arduino: "{\"actuatorId\": \"0\", \"state\": \"open\"}"
+2022-07-12 19:13:32.249 | INFO     | my_test_app.app.serial_arduino:send_command_serial:44 - Serial: To Arduino: b'0:open'
+2022-07-12 19:13:33.449 | INFO     | my_test_app.app.serial_arduino:parse_serial:81 - Serial: get serial message: Unknown command:open0:open
+, port: COM10
+2022-07-12 19:13:42.748 | INFO     | my_test_app.app.states_file:init_states:19 - JSON:  Successfully read init states: ./my_test_app/data/states.json
+2022-07-12 19:13:43.091 | INFO     | my_test_app.app.websockethandler:greet_new_client:76 - WebSocket: new client (<starlette.websockets.WebSocket object at 0x0000027138789720>) connected.
+2022-07-12 19:13:43.095 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'close', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:13:43.102 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'close', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:13:43.783 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"open"}
+2022-07-12 19:13:43.915 | INFO     | my_test_app.app.serial_arduino:send_command_serial:43 - Serial: To Arduino: "{\"actuatorId\": \"0\", \"state\": \"open\"}"
+2022-07-12 19:13:43.918 | INFO     | my_test_app.app.serial_arduino:send_command_serial:44 - Serial: To Arduino: b'0:open'
+2022-07-12 19:13:44.785 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"close"}
+2022-07-12 19:13:44.929 | INFO     | my_test_app.app.serial_arduino:send_command_serial:43 - Serial: To Arduino: "{\"actuatorId\": \"0\", \"state\": \"close\"}"
+2022-07-12 19:13:44.933 | INFO     | my_test_app.app.serial_arduino:send_command_serial:44 - Serial: To Arduino: b'0:close'
+2022-07-12 19:13:44.943 | INFO     | my_test_app.app.serial_arduino:parse_serial:81 - Serial: get serial message: 0:opening
+, port: COM10
+2022-07-12 19:13:45.137 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'close', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:13:45.142 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "opening"}
+2022-07-12 19:13:45.787 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"close"}
+2022-07-12 19:13:45.936 | INFO     | my_test_app.app.serial_arduino:send_command_serial:43 - Serial: To Arduino: "{\"actuatorId\": \"0\", \"state\": \"close\"}"
+2022-07-12 19:13:45.939 | INFO     | my_test_app.app.serial_arduino:send_command_serial:44 - Serial: To Arduino: b'0:close'
+2022-07-12 19:13:46.144 | INFO     | my_test_app.app.serial_arduino:parse_serial:81 - Serial: get serial message: 0:opening
+, port: COM10
+2022-07-12 19:13:46.345 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'opening', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:13:46.350 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "opening"}
+2022-07-12 19:13:46.784 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"close"}
+2022-07-12 19:13:46.933 | INFO     | my_test_app.app.serial_arduino:send_command_serial:43 - Serial: To Arduino: "{\"actuatorId\": \"0\", \"state\": \"close\"}"
+2022-07-12 19:13:46.939 | INFO     | my_test_app.app.serial_arduino:send_command_serial:44 - Serial: To Arduino: b'0:close'
+2022-07-12 19:13:47.788 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"close"}
+2022-07-12 19:13:47.950 | INFO     | my_test_app.app.serial_arduino:send_command_serial:43 - Serial: To Arduino: "{\"actuatorId\": \"0\", \"state\": \"close\"}"
+2022-07-12 19:13:47.956 | INFO     | my_test_app.app.serial_arduino:send_command_serial:44 - Serial: To Arduino: b'0:close'
+2022-07-12 19:13:47.959 | INFO     | my_test_app.app.serial_arduino:parse_serial:81 - Serial: get serial message: 0:o, port: COM10
+2022-07-12 19:13:48.154 | INFO     | my_test_app.app.serial_arduino:parse_serial:81 - Serial: get serial message: pening
+, port: COM10
+2022-07-12 19:13:48.806 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"close"}
+2022-07-12 19:13:48.948 | INFO     | my_test_app.app.serial_arduino:send_command_serial:43 - Serial: To Arduino: "{\"actuatorId\": \"0\", \"state\": \"close\"}"
+2022-07-12 19:13:48.951 | INFO     | my_test_app.app.serial_arduino:send_command_serial:44 - Serial: To Arduino: b'0:close'
+2022-07-12 19:13:50.149 | INFO     | my_test_app.app.serial_arduino:parse_serial:81 - Serial: get serial message: 0:opening
+, port: COM10
+2022-07-12 19:13:50.153 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'opening', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:13:50.159 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "opening"}
+2022-07-12 19:13:53.330 | INFO     | my_test_app.app.serial_arduino:parse_serial:81 - Serial: get serial message: 0:open
+, port: COM10
+2022-07-12 19:13:53.334 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'opening', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:13:53.339 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "open"}
+2022-07-12 19:13:56.326 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"close"}
+2022-07-12 19:13:56.500 | INFO     | my_test_app.app.serial_arduino:send_command_serial:43 - Serial: To Arduino: "{\"actuatorId\": \"0\", \"state\": \"close\"}"
+2022-07-12 19:13:56.504 | INFO     | my_test_app.app.serial_arduino:send_command_serial:44 - Serial: To Arduino: b'0:close'
+2022-07-12 19:13:57.325 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"close"}
+2022-07-12 19:13:57.514 | INFO     | my_test_app.app.serial_arduino:send_command_serial:43 - Serial: To Arduino: "{\"actuatorId\": \"0\", \"state\": \"close\"}"
+2022-07-12 19:13:57.518 | INFO     | my_test_app.app.serial_arduino:send_command_serial:44 - Serial: To Arduino: b'0:close'
+2022-07-12 19:13:57.711 | INFO     | my_test_app.app.serial_arduino:parse_serial:81 - Serial: get serial message: 0:closing
+, port: COM10
+2022-07-12 19:13:57.898 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'open', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:13:57.903 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "closing"}
+2022-07-12 19:13:58.334 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"close"}
+2022-07-12 19:13:58.497 | INFO     | my_test_app.app.serial_arduino:send_command_serial:43 - Serial: To Arduino: "{\"actuatorId\": \"0\", \"state\": \"close\"}"
+2022-07-12 19:13:58.500 | INFO     | my_test_app.app.serial_arduino:send_command_serial:44 - Serial: To Arduino: b'0:close'
+2022-07-12 19:13:59.324 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"close"}
+2022-07-12 19:13:59.515 | INFO     | my_test_app.app.serial_arduino:parse_serial:81 - Serial: get serial message: 0:clo, port: COM10
+2022-07-12 19:13:59.519 | INFO     | my_test_app.app.serial_arduino:send_command_serial:43 - Serial: To Arduino: "{\"actuatorId\": \"0\", \"state\": \"close\"}"
+2022-07-12 19:13:59.522 | INFO     | my_test_app.app.serial_arduino:send_command_serial:44 - Serial: To Arduino: b'0:close'
+2022-07-12 19:13:59.713 | INFO     | my_test_app.app.serial_arduino:parse_serial:81 - Serial: get serial message: sing
+, port: COM10
+2022-07-12 19:14:00.326 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"open"}
+2022-07-12 19:14:00.529 | INFO     | my_test_app.app.serial_arduino:send_command_serial:43 - Serial: To Arduino: "{\"actuatorId\": \"0\", \"state\": \"open\"}"
+2022-07-12 19:14:00.532 | INFO     | my_test_app.app.serial_arduino:send_command_serial:44 - Serial: To Arduino: b'0:open'
+2022-07-12 19:14:00.536 | INFO     | my_test_app.app.serial_arduino:parse_serial:81 - Serial: get serial message: 0:c, port: COM10
+2022-07-12 19:14:00.730 | INFO     | my_test_app.app.serial_arduino:parse_serial:81 - Serial: get serial message: losing
+, port: COM10
+2022-07-12 19:14:01.331 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"open"}
+2022-07-12 19:14:01.335 | INFO     | my_test_app.app.serial_arduino:send_command_serial:43 - Serial: To Arduino: "{\"actuatorId\": \"0\", \"state\": \"open\"}"
+2022-07-12 19:14:01.337 | INFO     | my_test_app.app.serial_arduino:send_command_serial:44 - Serial: To Arduino: b'0:open'
+2022-07-12 19:14:02.328 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"open"}
+2022-07-12 19:14:02.517 | INFO     | my_test_app.app.serial_arduino:parse_serial:81 - Serial: get serial message: 0:closing
+, port: COM10
+2022-07-12 19:14:02.521 | INFO     | my_test_app.app.serial_arduino:send_command_serial:43 - Serial: To Arduino: "{\"actuatorId\": \"0\", \"state\": \"open\"}"
+2022-07-12 19:14:02.524 | INFO     | my_test_app.app.serial_arduino:send_command_serial:44 - Serial: To Arduino: b'0:open'
+2022-07-12 19:14:02.527 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'closing', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:14:02.531 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "closing"}
+2022-07-12 19:14:03.323 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"open"}
+2022-07-12 19:14:03.548 | INFO     | my_test_app.app.serial_arduino:send_command_serial:43 - Serial: To Arduino: "{\"actuatorId\": \"0\", \"state\": \"open\"}"
+2022-07-12 19:14:03.608 | INFO     | my_test_app.app.serial_arduino:send_command_serial:44 - Serial: To Arduino: b'0:open'
+2022-07-12 19:14:03.632 | INFO     | my_test_app.app.serial_arduino:parse_serial:81 - Serial: get serial message: 0:closing
+, port: COM10
+2022-07-12 19:14:03.781 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'closing', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:14:03.791 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "closing"}
+2022-07-12 19:14:04.331 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"open"}
+2022-07-12 19:14:04.423 | INFO     | my_test_app.app.serial_arduino:send_command_serial:43 - Serial: To Arduino: "{\"actuatorId\": \"0\", \"state\": \"open\"}"
+2022-07-12 19:14:04.426 | INFO     | my_test_app.app.serial_arduino:send_command_serial:44 - Serial: To Arduino: b'0:open'
+2022-07-12 19:14:05.582 | INFO     | my_test_app.app.serial_arduino:parse_serial:81 - Serial: get serial message: 0:closing
+, port: COM10
+2022-07-12 19:14:05.783 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'closing', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:14:05.788 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "closing"}
+2022-07-12 19:14:08.560 | INFO     | my_test_app.app.serial_arduino:parse_serial:81 - Serial: get serial message: 0:close
+, port: COM10
+2022-07-12 19:14:08.564 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'closing', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:14:08.568 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "close"}
+2022-07-12 19:18:37.979 | INFO     | my_test_app.app.states_file:init_states:19 - JSON:  Successfully read init states: ./my_test_app/data/states.json
+2022-07-12 19:18:45.774 | INFO     | my_test_app.app.websockethandler:greet_new_client:76 - WebSocket: new client (<starlette.websockets.WebSocket object at 0x000001B887E826E0>) connected.
+2022-07-12 19:18:45.777 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'close', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:18:45.786 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'close', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:18:46.660 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"open"}
+2022-07-12 19:18:46.779 | INFO     | my_test_app.app.serial_arduino:send_command_serial:32 - Serial: To Arduino: b'0:open'
+2022-07-12 19:18:47.658 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"open"}
+2022-07-12 19:18:47.776 | INFO     | my_test_app.app.serial_arduino:send_command_serial:32 - Serial: To Arduino: b'0:open'
+2022-07-12 19:18:48.655 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"open"}
+2022-07-12 19:18:48.782 | INFO     | my_test_app.app.serial_arduino:send_command_serial:32 - Serial: To Arduino: b'0:open'
+2022-07-12 19:18:48.979 | INFO     | my_test_app.app.serial_arduino:parse_serial:60 - Serial: get serial message: Unknown command:open0:open
+, port: COM10
+2022-07-12 19:18:49.652 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"open"}
+2022-07-12 19:18:49.768 | INFO     | my_test_app.app.serial_arduino:send_command_serial:32 - Serial: To Arduino: b'0:open'
+2022-07-12 19:18:50.666 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"open"}
+2022-07-12 19:18:50.782 | INFO     | my_test_app.app.serial_arduino:parse_serial:60 - Serial: get serial message: Unk, port: COM10
+2022-07-12 19:18:50.785 | INFO     | my_test_app.app.serial_arduino:send_command_serial:32 - Serial: To Arduino: b'0:open'
+2022-07-12 19:18:50.982 | INFO     | my_test_app.app.serial_arduino:parse_serial:60 - Serial: get serial message: nown command:open0:open
+, port: COM10
+2022-07-12 19:18:51.681 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"open"}
+2022-07-12 19:18:51.777 | INFO     | my_test_app.app.serial_arduino:send_command_serial:32 - Serial: To Arduino: b'0:open'
+2022-07-12 19:18:52.980 | INFO     | my_test_app.app.serial_arduino:parse_serial:60 - Serial: get serial message: Unknown command:open0:open
+, port: COM10
+2022-07-12 19:18:57.451 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"open"}
+2022-07-12 19:18:57.557 | INFO     | my_test_app.app.serial_arduino:send_command_serial:32 - Serial: To Arduino: b'0:open'
+2022-07-12 19:18:58.744 | INFO     | my_test_app.app.serial_arduino:parse_serial:60 - Serial: get serial message: 0:opening
+, port: COM10
+2022-07-12 19:18:58.930 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'close', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:18:58.935 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "opening"}
+2022-07-12 19:19:01.920 | INFO     | my_test_app.app.serial_arduino:parse_serial:60 - Serial: get serial message: 0:open
+, port: COM10
+2022-07-12 19:19:02.125 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'opening', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:19:02.130 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "open"}
+2022-07-12 19:22:38.623 | INFO     | my_test_app.app.states_file:init_states:19 - JSON:  Successfully read init states: ./my_test_app/data/states.json
+2022-07-12 19:22:39.012 | INFO     | my_test_app.app.websockethandler:greet_new_client:76 - WebSocket: new client (<starlette.websockets.WebSocket object at 0x0000016AD3EE96F0>) connected.
+2022-07-12 19:22:39.016 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'open', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:22:39.024 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'open', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:22:39.642 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"close"}
+2022-07-12 19:22:39.817 | INFO     | my_test_app.app.serial_arduino:send_command_serial:32 - Serial: To Arduino: b'0:close'
+2022-07-12 19:22:41.020 | INFO     | my_test_app.app.serial_arduino:parse_serial:60 - Serial: get serial message: 0:closing
+, port: COM10
+2022-07-12 19:22:41.025 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'open', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:22:41.030 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "closing"}
+2022-07-12 19:22:41.650 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"close"}
+2022-07-12 19:22:41.808 | INFO     | my_test_app.app.serial_arduino:send_command_serial:32 - Serial: To Arduino: b'0:close'
+2022-07-12 19:22:43.004 | INFO     | my_test_app.app.serial_arduino:parse_serial:60 - Serial: get serial message: 0:closing
+, port: COM10
+2022-07-12 19:22:43.008 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'closing', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:22:43.013 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "closing"}
+2022-07-12 19:22:43.660 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"close"}
+2022-07-12 19:22:43.793 | INFO     | my_test_app.app.serial_arduino:send_command_serial:32 - Serial: To Arduino: b'0:close'
+2022-07-12 19:22:45.003 | INFO     | my_test_app.app.serial_arduino:parse_serial:60 - Serial: get serial message: 0:closing
+, port: COM10
+2022-07-12 19:22:45.007 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'closing', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:22:45.011 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "closing"}
+2022-07-12 19:22:45.663 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"close"}
+2022-07-12 19:22:45.812 | INFO     | my_test_app.app.serial_arduino:send_command_serial:32 - Serial: To Arduino: b'0:close'
+2022-07-12 19:22:47.013 | INFO     | my_test_app.app.serial_arduino:parse_serial:60 - Serial: get serial message: 0:closing
+, port: COM10
+2022-07-12 19:22:47.017 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'closing', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:22:47.021 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "closing"}
+2022-07-12 19:22:47.223 | INFO     | my_test_app.app.serial_arduino:parse_serial:60 - Serial: get serial message: 0:close
+, port: COM10
+2022-07-12 19:22:47.227 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'closing', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:22:47.231 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "close"}
+2022-07-12 19:22:47.666 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"close"}
+2022-07-12 19:22:47.814 | INFO     | my_test_app.app.serial_arduino:send_command_serial:32 - Serial: To Arduino: b'0:close'
+2022-07-12 19:22:49.025 | INFO     | my_test_app.app.serial_arduino:parse_serial:60 - Serial: get serial message: 0:closing
+, port: COM10
+2022-07-12 19:22:49.029 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'close', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:22:49.033 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "closing"}
+2022-07-12 19:22:49.681 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"close"}
+2022-07-12 19:22:49.829 | INFO     | my_test_app.app.serial_arduino:send_command_serial:32 - Serial: To Arduino: b'0:close'
+2022-07-12 19:22:51.054 | INFO     | my_test_app.app.serial_arduino:parse_serial:60 - Serial: get serial message: 0:closing
+, port: COM10
+2022-07-12 19:22:51.255 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'closing', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:22:51.260 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "closing"}
+2022-07-12 19:22:51.697 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"close"}
+2022-07-12 19:22:51.854 | INFO     | my_test_app.app.serial_arduino:send_command_serial:32 - Serial: To Arduino: b'0:close'
+2022-07-12 19:22:53.043 | INFO     | my_test_app.app.serial_arduino:parse_serial:60 - Serial: get serial message: 0:closing
+, port: COM10
+2022-07-12 19:22:53.047 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'closing', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:22:53.051 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "closing"}
+2022-07-12 19:22:53.712 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"close"}
+2022-07-12 19:22:53.839 | INFO     | my_test_app.app.serial_arduino:send_command_serial:32 - Serial: To Arduino: b'0:close'
+2022-07-12 19:22:55.040 | INFO     | my_test_app.app.serial_arduino:parse_serial:60 - Serial: get serial message: 0:closing
+, port: COM10
+2022-07-12 19:22:55.230 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'closing', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:22:55.235 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "closing"}
+2022-07-12 19:22:55.239 | INFO     | my_test_app.app.serial_arduino:parse_serial:60 - Serial: get serial message: 0:close
+, port: COM10
+2022-07-12 19:22:55.434 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'closing', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:22:55.438 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "close"}
+2022-07-12 19:22:55.718 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"close"}
+2022-07-12 19:22:55.821 | INFO     | my_test_app.app.serial_arduino:send_command_serial:32 - Serial: To Arduino: b'0:close'
+2022-07-12 19:22:57.033 | INFO     | my_test_app.app.serial_arduino:parse_serial:60 - Serial: get serial message: 0:closing
+, port: COM10
+2022-07-12 19:22:57.236 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'close', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:22:57.241 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "closing"}
+2022-07-12 19:22:57.726 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"close"}
+2022-07-12 19:22:57.842 | INFO     | my_test_app.app.serial_arduino:send_command_serial:32 - Serial: To Arduino: b'0:close'
+2022-07-12 19:22:59.023 | INFO     | my_test_app.app.serial_arduino:parse_serial:60 - Serial: get serial message: 0:closing
+, port: COM10
+2022-07-12 19:22:59.028 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'closing', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:22:59.031 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "closing"}
+2022-07-12 19:22:59.732 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"close"}
+2022-07-12 19:22:59.848 | INFO     | my_test_app.app.serial_arduino:send_command_serial:32 - Serial: To Arduino: b'0:close'
+2022-07-12 19:23:01.060 | INFO     | my_test_app.app.serial_arduino:parse_serial:60 - Serial: get serial message: 0:closing
+, port: COM10
+2022-07-12 19:23:01.262 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'closing', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:23:01.266 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "closing"}
+2022-07-12 19:23:01.737 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"close"}
+2022-07-12 19:23:01.868 | INFO     | my_test_app.app.serial_arduino:send_command_serial:32 - Serial: To Arduino: b'0:close'
+2022-07-12 19:23:03.071 | INFO     | my_test_app.app.serial_arduino:parse_serial:60 - Serial: get serial message: 0:closing
+, port: COM10
+2022-07-12 19:23:03.261 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'closing', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:23:03.266 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "closing"}
+2022-07-12 19:23:03.270 | INFO     | my_test_app.app.serial_arduino:parse_serial:60 - Serial: get serial message: 0:close
+, port: COM10
+2022-07-12 19:23:03.465 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'closing', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:23:03.469 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "close"}
+2022-07-12 19:23:03.734 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"close"}
+2022-07-12 19:23:03.865 | INFO     | my_test_app.app.serial_arduino:send_command_serial:32 - Serial: To Arduino: b'0:close'
+2022-07-12 19:23:05.067 | INFO     | my_test_app.app.serial_arduino:parse_serial:60 - Serial: get serial message: 0:closing
+, port: COM10
+2022-07-12 19:23:05.072 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'close', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:23:05.078 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "closing"}
+2022-07-12 19:23:05.741 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"close"}
+2022-07-12 19:23:05.866 | INFO     | my_test_app.app.serial_arduino:send_command_serial:32 - Serial: To Arduino: b'0:close'
+2022-07-12 19:23:06.911 | INFO     | my_test_app.app.serial_arduino:parse_serial:60 - Serial: get serial message: 0:closing
+, port: COM10
+2022-07-12 19:23:06.915 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'closing', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:23:06.920 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "closing"}
+2022-07-12 19:23:09.296 | INFO     | my_test_app.app.serial_arduino:parse_serial:60 - Serial: get serial message: 0:close
+, port: COM10
+2022-07-12 19:23:09.497 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'closing', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:23:09.502 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "close"}
+2022-07-12 19:23:56.394 | INFO     | my_test_app.app.states_file:init_states:19 - JSON:  Successfully read init states: ./my_test_app/data/states.json
+2022-07-12 19:24:08.620 | INFO     | my_test_app.app.websockethandler:greet_new_client:76 - WebSocket: new client (<starlette.websockets.WebSocket object at 0x0000028845709720>) connected.
+2022-07-12 19:24:08.623 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'close', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:24:08.630 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'close', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:24:09.480 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"open"}
+2022-07-12 19:24:09.630 | INFO     | my_test_app.app.serial_arduino:send_command_serial:32 - Serial: To Arduino: b'0:open'
+2022-07-12 19:24:10.708 | INFO     | my_test_app.app.serial_arduino:parse_serial:60 - Serial: get serial message: 0:opening
+, port: COM10
+2022-07-12 19:24:10.827 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'close', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:24:10.831 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "opening"}
+2022-07-12 19:24:13.951 | INFO     | my_test_app.app.serial_arduino:parse_serial:60 - Serial: get serial message: 0:open
+, port: COM10
+2022-07-12 19:24:13.983 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'opening', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:24:13.987 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "open"}
+2022-07-12 19:26:53.230 | INFO     | my_test_app.app.states_file:init_states:19 - JSON:  Successfully read init states: ./my_test_app/data/states.json
+2022-07-12 19:26:53.583 | INFO     | my_test_app.app.websockethandler:greet_new_client:76 - WebSocket: new client (<starlette.websockets.WebSocket object at 0x000001F988CFE6E0>) connected.
+2022-07-12 19:26:53.586 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'open', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:26:53.594 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'open', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:26:54.183 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"open"}
+2022-07-12 19:26:54.396 | INFO     | my_test_app.app.serial_arduino:send_command_serial:32 - Serial: To Arduino: b'0:open'
+2022-07-12 19:26:54.447 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"open"}
+2022-07-12 19:26:54.596 | INFO     | my_test_app.app.serial_arduino:send_command_serial:32 - Serial: To Arduino: b'0:open'
+2022-07-12 19:26:54.637 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"open"}
+2022-07-12 19:26:54.790 | INFO     | my_test_app.app.serial_arduino:send_command_serial:32 - Serial: To Arduino: b'0:open'
+2022-07-12 19:26:54.833 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"open"}
+2022-07-12 19:26:54.987 | INFO     | my_test_app.app.serial_arduino:send_command_serial:32 - Serial: To Arduino: b'0:open'
+2022-07-12 19:26:55.035 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"open"}
+2022-07-12 19:26:55.183 | INFO     | my_test_app.app.serial_arduino:send_command_serial:32 - Serial: To Arduino: b'0:open'
+2022-07-12 19:26:56.396 | INFO     | my_test_app.app.serial_arduino:parse_serial:60 - Serial: port: COM10 | get serial raw message: Unknown command:open0:open0:open0:open
+
+2022-07-12 19:27:04.311 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"close"}
+2022-07-12 19:27:04.516 | INFO     | my_test_app.app.serial_arduino:send_command_serial:32 - Serial: To Arduino: b'0:close'
+2022-07-12 19:27:05.712 | INFO     | my_test_app.app.serial_arduino:parse_serial:60 - Serial: port: COM10 | get serial raw message: 0:closing
+
+2022-07-12 19:27:05.886 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'open', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:27:05.891 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "closing"}
+2022-07-12 19:27:08.996 | INFO     | my_test_app.app.serial_arduino:parse_serial:60 - Serial: port: COM10 | get serial raw message: 0:close
+
+2022-07-12 19:27:09.076 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'closing', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 19:27:09.081 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "close"}
+2022-07-12 19:57:43.369 | INFO     | my_test_app.app.application:websocket_endpoint:93 - WebSocket: client (<starlette.websockets.WebSocket object at 0x000001F988CFE6E0>) disconnected.
+2022-07-12 20:38:46.270 | INFO     | my_test_app.app.states_file:init_states:19 - JSON:  Successfully read init states: ./my_test_app/data/states.json
+2022-07-12 20:38:53.852 | INFO     | my_test_app.app.websockethandler:greet_new_client:76 - WebSocket: new client (<starlette.websockets.WebSocket object at 0x0000028FC5FE26E0>) connected.
+2022-07-12 20:38:53.857 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'close', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 20:38:53.864 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'close', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 20:38:54.541 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"open"}
+2022-07-12 20:38:54.643 | INFO     | my_test_app.app.serial_arduino:send_command_serial:32 - Serial: To Arduino: b'0:open'
+2022-07-12 20:38:55.820 | INFO     | my_test_app.app.serial_arduino:parse_serial:60 - Serial: port: COM9 | get serial raw message: 0:opening
+
+2022-07-12 20:38:55.825 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'close', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 20:38:55.829 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "opening"}
+2022-07-12 20:38:58.986 | INFO     | my_test_app.app.serial_arduino:parse_serial:60 - Serial: port: COM9 | get serial raw message: 0:open
+
+2022-07-12 20:38:59.189 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'opening', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 20:38:59.194 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "open"}
+2022-07-12 21:12:53.725 | INFO     | my_test_app.app.states_file:init_states:19 - JSON:  Successfully read init states: ./my_test_app/data/states.json
+2022-07-12 21:13:06.735 | INFO     | my_test_app.app.websockethandler:greet_new_client:76 - WebSocket: new client (<starlette.websockets.WebSocket object at 0x000002185BAA0730>) connected.
+2022-07-12 21:13:06.739 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'open', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 21:13:06.750 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'open', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 21:13:07.335 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"close"}
+2022-07-12 21:13:07.525 | INFO     | my_test_app.app.serial_arduino:send_command_serial:32 - Serial: To Arduino: b'0:close'
+2022-07-12 21:13:08.601 | INFO     | my_test_app.app.serial_arduino:parse_serial:60 - Serial: port: COM9 | get serial raw message: 0:closing
+
+2022-07-12 21:13:08.734 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'open', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 21:13:08.739 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "closing"}
+2022-07-12 21:13:11.964 | INFO     | my_test_app.app.serial_arduino:parse_serial:60 - Serial: port: COM9 | get serial raw message: 0:close
+
+2022-07-12 21:13:11.968 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'closing', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 21:13:11.972 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "close"}
+2022-07-12 21:13:12.647 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"open"}
+2022-07-12 21:13:12.782 | INFO     | my_test_app.app.serial_arduino:send_command_serial:32 - Serial: To Arduino: b'0:open'
+2022-07-12 21:13:13.792 | INFO     | my_test_app.app.serial_arduino:parse_serial:60 - Serial: port: COM9 | get serial raw message: 0
+2022-07-12 21:13:13.996 | INFO     | my_test_app.app.serial_arduino:parse_serial:60 - Serial: port: COM9 | get serial raw message: :opening
+
+2022-07-12 21:13:17.196 | INFO     | my_test_app.app.serial_arduino:parse_serial:60 - Serial: port: COM9 | get serial raw message: 0:open
+
+2022-07-12 21:13:17.200 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'close', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 21:13:17.205 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "open"}
+2022-07-12 21:13:18.495 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"close"}
+2022-07-12 21:13:18.584 | INFO     | my_test_app.app.serial_arduino:send_command_serial:32 - Serial: To Arduino: b'0:close'
+2022-07-12 21:13:19.776 | INFO     | my_test_app.app.serial_arduino:parse_serial:60 - Serial: port: COM9 | get serial raw message: 0:closing
+
+2022-07-12 21:13:19.980 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'open', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 21:13:19.985 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "closing"}
+2022-07-12 21:13:22.944 | INFO     | my_test_app.app.serial_arduino:parse_serial:60 - Serial: port: COM9 | get serial raw message: 0:close
+
+2022-07-12 21:13:23.133 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'closing', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 21:13:23.139 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "close"}
+2022-07-12 21:13:25.319 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"open"}
+2022-07-12 21:13:25.508 | INFO     | my_test_app.app.serial_arduino:send_command_serial:32 - Serial: To Arduino: b'0:open'
+2022-07-12 21:13:26.699 | INFO     | my_test_app.app.serial_arduino:parse_serial:60 - Serial: port: COM9 | get serial raw message: 0:opening
+
+2022-07-12 21:13:26.704 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'close', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 21:13:26.708 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "opening"}
+2022-07-12 21:13:29.873 | INFO     | my_test_app.app.serial_arduino:parse_serial:60 - Serial: port: COM9 | get serial raw message: 0:open
+
+2022-07-12 21:13:29.877 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'opening', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 21:13:29.881 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "open"}
+2022-07-12 21:13:30.767 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"close"}
+2022-07-12 21:13:30.872 | INFO     | my_test_app.app.serial_arduino:send_command_serial:32 - Serial: To Arduino: b'0:close'
+2022-07-12 21:13:32.051 | INFO     | my_test_app.app.serial_arduino:parse_serial:60 - Serial: port: COM9 | get serial raw message: 0:closing
+
+2022-07-12 21:13:32.055 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'open', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 21:13:32.059 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "closing"}
+2022-07-12 21:13:35.232 | INFO     | my_test_app.app.serial_arduino:parse_serial:60 - Serial: port: COM9 | get serial raw message: 0:close
+
+2022-07-12 21:13:35.437 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'closing', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 21:13:35.442 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "close"}
+2022-07-12 21:13:37.430 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"close"}
+2022-07-12 21:13:37.621 | INFO     | my_test_app.app.serial_arduino:send_command_serial:32 - Serial: To Arduino: b'0:close'
+2022-07-12 21:13:38.821 | INFO     | my_test_app.app.serial_arduino:parse_serial:60 - Serial: port: COM9 | get serial raw message: 0:closing
+
+2022-07-12 21:13:38.825 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'close', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 21:13:38.830 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "closing"}
+2022-07-12 21:13:41.982 | INFO     | my_test_app.app.serial_arduino:parse_serial:60 - Serial: port: COM9 | get serial raw message: 0:close
+
+2022-07-12 21:13:42.187 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'closing', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 21:13:42.192 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "close"}
+2022-07-12 21:13:43.486 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"open"}
+2022-07-12 21:13:43.575 | INFO     | my_test_app.app.serial_arduino:send_command_serial:32 - Serial: To Arduino: b'0:open'
+2022-07-12 21:13:44.775 | INFO     | my_test_app.app.serial_arduino:parse_serial:60 - Serial: port: COM9 | get serial raw message: 0:opening
+
+2022-07-12 21:13:44.965 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'close', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 21:13:44.969 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "opening"}
+2022-07-12 21:13:47.954 | INFO     | my_test_app.app.serial_arduino:parse_serial:60 - Serial: port: COM9 | get serial raw message: 0:open
+
+2022-07-12 21:13:48.157 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'opening', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 21:13:48.162 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "open"}
+2022-07-12 21:13:49.759 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"close"}
+2022-07-12 21:13:49.932 | INFO     | my_test_app.app.serial_arduino:send_command_serial:32 - Serial: To Arduino: b'0:close'
+2022-07-12 21:13:51.122 | INFO     | my_test_app.app.serial_arduino:parse_serial:60 - Serial: port: COM9 | get serial raw message: 0:closing
+
+2022-07-12 21:13:51.326 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'open', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 21:13:51.331 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "closing"}
+2022-07-12 21:13:54.293 | INFO     | my_test_app.app.serial_arduino:parse_serial:60 - Serial: port: COM9 | get serial raw message: 0:close
+
+2022-07-12 21:13:54.297 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'closing', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 21:13:54.301 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "close"}
+2022-07-12 21:13:55.558 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"open"}
+2022-07-12 21:13:55.686 | INFO     | my_test_app.app.serial_arduino:send_command_serial:32 - Serial: To Arduino: b'0:open'
+2022-07-12 21:13:56.886 | INFO     | my_test_app.app.serial_arduino:parse_serial:60 - Serial: port: COM9 | get serial raw message: 0:opening
+
+2022-07-12 21:13:57.091 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'close', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 21:13:57.096 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "opening"}
+2022-07-12 21:14:00.059 | INFO     | my_test_app.app.serial_arduino:parse_serial:60 - Serial: port: COM9 | get serial raw message: 0:open
+
+2022-07-12 21:14:00.063 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'opening', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 21:14:00.067 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "open"}
+2022-07-12 21:14:00.542 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"open"}
+2022-07-12 21:14:00.647 | INFO     | my_test_app.app.serial_arduino:send_command_serial:32 - Serial: To Arduino: b'0:open'
+2022-07-12 21:14:01.832 | INFO     | my_test_app.app.serial_arduino:parse_serial:60 - Serial: port: COM9 | get serial raw message: 0:opening
+
+2022-07-12 21:14:01.837 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'open', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 21:14:01.840 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "opening"}
+2022-07-12 21:14:05.038 | INFO     | my_test_app.app.serial_arduino:parse_serial:60 - Serial: port: COM9 | get serial raw message: 0:open
+
+2022-07-12 21:14:05.240 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'opening', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 21:14:05.245 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "open"}
+2022-07-12 21:14:06.031 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"close"}
+2022-07-12 21:14:06.226 | INFO     | my_test_app.app.serial_arduino:send_command_serial:32 - Serial: To Arduino: b'0:close'
+2022-07-12 21:14:07.415 | INFO     | my_test_app.app.serial_arduino:parse_serial:60 - Serial: port: COM9 | get serial raw message: 0:closing
+
+2022-07-12 21:14:07.603 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'open', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 21:14:07.608 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "closing"}
+2022-07-12 21:14:10.620 | INFO     | my_test_app.app.serial_arduino:parse_serial:60 - Serial: port: COM9 | get serial raw message: 0:close
+
+2022-07-12 21:14:10.624 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'closing', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 21:14:10.628 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "close"}
+2022-07-12 21:14:11.174 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"close"}
+2022-07-12 21:14:11.238 | INFO     | my_test_app.app.serial_arduino:send_command_serial:32 - Serial: To Arduino: b'0:close'
+2022-07-12 21:14:12.440 | INFO     | my_test_app.app.serial_arduino:parse_serial:60 - Serial: port: COM9 | get serial raw message: 0:closing
+
+2022-07-12 21:14:12.642 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'close', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 21:14:12.647 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "closing"}
+2022-07-12 21:14:15.622 | INFO     | my_test_app.app.serial_arduino:parse_serial:60 - Serial: port: COM9 | get serial raw message: 0:close
+
+2022-07-12 21:14:15.627 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'closing', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 21:14:15.630 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "close"}
+2022-07-12 21:14:16.710 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"close"}
+2022-07-12 21:14:16.800 | INFO     | my_test_app.app.serial_arduino:send_command_serial:32 - Serial: To Arduino: b'0:close'
+2022-07-12 21:14:17.982 | INFO     | my_test_app.app.serial_arduino:parse_serial:60 - Serial: port: COM9 | get serial raw message: 0:closing
+
+2022-07-12 21:14:18.188 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'close', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 21:14:18.193 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "closing"}
+2022-07-12 21:14:21.165 | INFO     | my_test_app.app.serial_arduino:parse_serial:60 - Serial: port: COM9 | get serial raw message: 0:close
+
+2022-07-12 21:14:21.357 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'closing', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 21:14:21.362 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "close"}
+2022-07-12 21:14:22.118 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"open"}
+2022-07-12 21:14:22.144 | INFO     | my_test_app.app.serial_arduino:send_command_serial:32 - Serial: To Arduino: b'0:open'
+2022-07-12 21:14:23.317 | INFO     | my_test_app.app.serial_arduino:parse_serial:60 - Serial: port: COM9 | get serial raw message: 0:opening
+
+2022-07-12 21:14:23.321 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'close', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 21:14:23.325 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "opening"}
+2022-07-12 21:14:26.521 | INFO     | my_test_app.app.serial_arduino:parse_serial:60 - Serial: port: COM9 | get serial raw message: 0:open
+
+2022-07-12 21:14:26.723 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'opening', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 21:14:26.728 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "open"}
+2022-07-12 21:14:26.830 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"open"}
+2022-07-12 21:14:26.915 | INFO     | my_test_app.app.serial_arduino:send_command_serial:32 - Serial: To Arduino: b'0:open'
+2022-07-12 21:14:28.100 | INFO     | my_test_app.app.serial_arduino:parse_serial:60 - Serial: port: COM9 | get serial raw message: 0:opening
+
+2022-07-12 21:14:28.105 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'open', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 21:14:28.108 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "opening"}
+2022-07-12 21:14:31.264 | INFO     | my_test_app.app.serial_arduino:parse_serial:60 - Serial: port: COM9 | get serial raw message: 0:open
+
+2022-07-12 21:14:31.470 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'opening', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 21:14:31.475 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "open"}
+2022-07-12 21:14:32.787 | INFO     | my_test_app.app.application:websocket_endpoint:93 - WebSocket: client (<starlette.websockets.WebSocket object at 0x000002185BAA0730>) disconnected.
+2022-07-12 21:14:33.111 | INFO     | my_test_app.app.websockethandler:greet_new_client:76 - WebSocket: new client (<starlette.websockets.WebSocket object at 0x000002185BAD9E40>) connected.
+2022-07-12 21:14:33.114 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'open', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 21:14:33.122 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'open', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 21:14:34.414 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"close"}
+2022-07-12 21:14:34.448 | INFO     | my_test_app.app.serial_arduino:send_command_serial:32 - Serial: To Arduino: b'0:close'
+2022-07-12 21:14:35.627 | INFO     | my_test_app.app.serial_arduino:parse_serial:60 - Serial: port: COM9 | get serial raw message: 0:closing
+
+2022-07-12 21:14:35.631 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'open', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 21:14:35.635 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "closing"}
+2022-07-12 21:14:38.869 | INFO     | my_test_app.app.serial_arduino:parse_serial:60 - Serial: port: COM9 | get serial raw message: 0:close
+
+2022-07-12 21:14:38.873 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'closing', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-12 21:14:38.877 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "close"}
+2022-07-13 13:49:37.717 | INFO     | my_test_app.app.states_file:init_states:19 - JSON:  Successfully read init states: ./my_test_app/data/states.json
+2022-07-13 13:49:42.367 | INFO     | my_test_app.app.websockethandler:greet_new_client:76 - WebSocket: new client (<starlette.websockets.WebSocket object at 0x000002C7B781B460>) connected.
+2022-07-13 13:49:42.369 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'close', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-13 13:49:42.452 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'close', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-13 13:49:44.456 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"close"}
+2022-07-13 13:49:44.655 | INFO     | my_test_app.app.serial_arduino:send_command_serial:32 - Serial: To Arduino: b'0:close'
+2022-07-13 13:49:45.717 | INFO     | my_test_app.app.serial_arduino:parse_serial:60 - Serial: port: COM8 | get serial raw message: 0:closing
+
+2022-07-13 13:49:45.867 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'close', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-13 13:49:45.870 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "closing"}
+2022-07-13 13:49:49.137 | INFO     | my_test_app.app.serial_arduino:parse_serial:60 - Serial: port: COM8 | get serial raw message: 0:close
+
+2022-07-13 13:49:49.262 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'closing', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-13 13:49:49.265 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "close"}
+2022-07-13 13:49:50.519 | INFO     | my_test_app.app.websockethandler:receive_request:37 - WebSocket: We get from client: {"actuatorId":"0","state":"open"}
+2022-07-13 13:49:50.650 | INFO     | my_test_app.app.serial_arduino:send_command_serial:32 - Serial: To Arduino: b'0:open'
+2022-07-13 13:49:51.750 | INFO     | my_test_app.app.serial_arduino:parse_serial:60 - Serial: port: COM8 | get serial raw message: 0:opening
+
+2022-07-13 13:49:51.835 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'close', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-13 13:49:51.839 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "opening"}
+2022-07-13 13:49:55.137 | INFO     | my_test_app.app.serial_arduino:parse_serial:60 - Serial: port: COM8 | get serial raw message: 0:open
+
+2022-07-13 13:49:55.284 | INFO     | my_test_app.app.states_file:read_states:30 - JSON:  Successfully read states: {'0': 'opening', '1': 'close'} from ./my_test_app/data/states.json
+2022-07-13 13:49:55.288 | INFO     | my_test_app.app.websockethandler:_update_clients_pages:84 - WebSocket: send updated data to clients: {"actuatorId": "0", "state": "open"}
