@@ -1,4 +1,3 @@
-import json
 import os
 import re
 
@@ -10,17 +9,13 @@ from typing import Dict
 from loguru import logger
 
 from serial import Serial, SerialException
-from serial.tools import list_ports
 
-from my_test_app.app.domain import SerialRequest, ActuatorResponse
-
-ARDUINO_1: str = "8543930323335111D1A2"
-ARDUINO_2: str = "755333530383511130C0"
+from .domain import SerialRequest, ActuatorResponse
 
 PREFIX = "Serial:"
 
 ser = Serial(
-    port=os.environ.get("SERIAL_PORT", 'COM8'),
+    port=os.environ.get("SERIAL_PORT"),
     baudrate=int(os.environ.get('SERIAL_BAUDRATE', 9600)),
     timeout=int(os.environ.get('SERIAL_TIMEOUT', 0)),
 )

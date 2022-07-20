@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  test_veni_task:
+    build:
+      context: ./my_test_app
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    env_file:
+      - .env
+    volumes:
+      - ./data:/my_test_app/data
+    devices:
+      - ${SERIAL_PORT:?No serial port provided}
+    restart: always

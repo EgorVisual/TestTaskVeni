@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  test_veni_task:
+    image: egordockerhub/venitesttask_backend:v1-armv7
+    ports:
+      - "8080:8080"
+    env_file:
+      - .env
+    volumes:
+      - ./data:/my_test_app/data
+    devices:
+      - ${SERIAL_PORT:?No serial port provided}
+    restart: always

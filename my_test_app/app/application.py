@@ -1,21 +1,19 @@
-import json
-import os
 import asyncio
 
 from loguru import logger
 
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect
-from fastapi.staticfiles import StaticFiles
 from fastapi.responses import HTMLResponse
+
 from typing import Set
 
 from .serial_arduino import background_receive_serial
-from .states_file import init_states, read_states, write_states
+from .states_file import init_states
 from .websockethandler import WebSocketHandler
 
 app = FastAPI()
 
-logger.add("my_test_app/data/logs.log", rotation="50 MB")
+logger.add("./data/logs.log", rotation="50 MB")
 
 WS_CLIENTS: Set[WebSocket] = set()
 RESPONSE_QUEUE = asyncio.Queue()
@@ -27,18 +25,30 @@ html = """
 <!DOCTYPE html>
 <html>
     <head>
-        <title>My controller</title>
+        <title>Control panel</title>
     </head>
     <body>
-        <h1>WebSocket Chat</h1>
-        <button onclick="sendCommand(event, id)" id="open_button">Open</button>
-        <button onclick="sendCommand(event, id)" id="close_button">Close</button>
+        <h1>Control panel</h1>
+        You can use this panel to control 2 actuators by buttons (open/close). The first pair of buttons is used for 
+        first actuator, the second pair - for the second actuator!
+        <div>
         <input id = "command_first_output" value = "Command 1"/>
         <input id = "command_second_output" value = "Command 2"/>
+        </div>
+        <div> 
+        Actuator id - 0   
+        <button onclick="sendCommand(event, 'open', 0)" id="open_button_zero">Open</button>
+        <button onclick="sendCommand(event, 'close', 0)" id="close_button_zero">Close</button>
+        </div>
+        <div>  
+        Actuator id - 1     
+        <button onclick="sendCommand(event, 'open', 1)" id="open_button_first">Open</button>
+        <button onclick="sendCommand(event, 'close', 1)" id="close_button_first">Close</button>
+        </div>
         <ul id='messages'>
         </ul>
         <script>
-            var ws = new WebSocket("ws://localhost:8000/ws");
+            var ws = new WebSocket("ws://localhost:8080/ws");
             ws.onmessage = function(event) {
                 var messages = document.getElementById('messages')
                 var message = document.createElement('li')
@@ -54,9 +64,8 @@ html = """
                     document.getElementById("command_second_output").value = actuatorStates["state"]
                 }
                 }
-            function sendCommand(event, button_command) {
-                command = button_command.split("_")[0]
-                const request = JSON.stringify({actuatorId: '0', state: command});
+            function sendCommand(event, button_command, actuator_id) {
+                const request = JSON.stringify({actuatorId: actuator_id, state: button_command});
                 ws.send(request)
                 event.preventDefault()
             }

@@ -1,14 +1,15 @@
 import json
 
 from loguru import logger
+
 from typing import Dict
 
 DEFAULT_STATES: Dict[str, str] = {
-    "0": "CLOSE",
-    "1": "CLOSE",
+    "0": "close",
+    "1": "close",
 }
 
-STATES_FILE = "./my_test_app/data/states.json"
+STATES_FILE = "./data/states.json"
 PREFIX = "JSON: "
 
 
