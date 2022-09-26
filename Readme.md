@@ -1,6 +1,6 @@
-#Test task for Veni
+# Test task for Veni
 
-#Project description:
+# Project description:
 
 The project is a backend part of the Web app. 
 
